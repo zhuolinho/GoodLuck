@@ -8,11 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "MyApp.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        MyApp();
+//        MyApp app
+//        ;
+//        AccountConfig accCfg;
+//        accCfg.idUri = "sip:localhost";
+//        accCfg.natConfig.iceEnabled = true;
+//        app.initAccountConfigForYarlung(accCfg);
+//        accCfg.videoConfig.autoTransmitOutgoing = true;
+//        accCfg.videoConfig.autoShowIncoming = true;
+//        MyAccount *accout = new MyAccount(accCfg);
+//        MyAppObserver *obs;
+//        app.init(*obs, "");
 //        pj::Endpoint ep;
 //        ep.libCreate();
 //        pj::EpConfig epConfig;
