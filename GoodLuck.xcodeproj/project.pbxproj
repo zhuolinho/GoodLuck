@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06164BA81B6C6C720085D1EA /* MyApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06164BA61B6C6C720085D1EA /* MyApp.cpp */; };
 		0634E9401B6682810001B2C3 /* libg7221codec-arm-apple-darwin9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9311B6682810001B2C3 /* libg7221codec-arm-apple-darwin9.a */; };
 		0634E9411B6682810001B2C3 /* libgsmcodec-arm-apple-darwin9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9321B6682810001B2C3 /* libgsmcodec-arm-apple-darwin9.a */; };
 		0634E9421B6682810001B2C3 /* libilbccodec-arm-apple-darwin9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9331B6682810001B2C3 /* libilbccodec-arm-apple-darwin9.a */; };
@@ -41,12 +40,14 @@
 		0634E9861B66867D0001B2C3 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9851B66867D0001B2C3 /* CoreVideo.framework */; };
 		0634E9881B6686830001B2C3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9871B6686830001B2C3 /* CoreMedia.framework */; };
 		065C29C61B64D8FF00E80339 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 065C29C51B64D8FF00E80339 /* main.mm */; };
-		065C29CC1B64D8FF00E80339 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C29CB1B64D8FF00E80339 /* ViewController.m */; };
+		065C29CC1B64D8FF00E80339 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 065C29CB1B64D8FF00E80339 /* ViewController.mm */; };
 		065C29CF1B64D8FF00E80339 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065C29CD1B64D8FF00E80339 /* Main.storyboard */; };
 		065C29D11B64D8FF00E80339 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065C29D01B64D8FF00E80339 /* Images.xcassets */; };
 		065C29D41B64D8FF00E80339 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065C29D21B64D8FF00E80339 /* LaunchScreen.xib */; };
 		065C29E01B64D8FF00E80339 /* GoodLuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C29DF1B64D8FF00E80339 /* GoodLuckTests.m */; };
-		065C29EC1B64DB8F00E80339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C29EB1B64DB8F00E80339 /* AppDelegate.m */; };
+		065C29EC1B64DB8F00E80339 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 065C29EB1B64DB8F00E80339 /* AppDelegate.mm */; };
+		06D329E41B7359AD009384EF /* MyPJ.mm in Sources */ = {isa = PBXBuildFile; fileRef = 06D329E21B7359AD009384EF /* MyPJ.mm */; };
+		06D329E71B735FE4009384EF /* MyApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 06D329E61B735FE4009384EF /* MyApp.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +61,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06164BA61B6C6C720085D1EA /* MyApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyApp.cpp; sourceTree = "<group>"; };
-		06164BA71B6C6C720085D1EA /* MyApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApp.h; sourceTree = "<group>"; };
 		0634E9311B6682810001B2C3 /* libg7221codec-arm-apple-darwin9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libg7221codec-arm-apple-darwin9.a"; path = "lib/libg7221codec-arm-apple-darwin9.a"; sourceTree = "<group>"; };
 		0634E9321B6682810001B2C3 /* libgsmcodec-arm-apple-darwin9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgsmcodec-arm-apple-darwin9.a"; path = "lib/libgsmcodec-arm-apple-darwin9.a"; sourceTree = "<group>"; };
 		0634E9331B6682810001B2C3 /* libilbccodec-arm-apple-darwin9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libilbccodec-arm-apple-darwin9.a"; path = "lib/libilbccodec-arm-apple-darwin9.a"; sourceTree = "<group>"; };
@@ -99,14 +98,18 @@
 		065C29C51B64D8FF00E80339 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		065C29C71B64D8FF00E80339 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		065C29CA1B64D8FF00E80339 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		065C29CB1B64D8FF00E80339 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		065C29CB1B64D8FF00E80339 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		065C29CE1B64D8FF00E80339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		065C29D01B64D8FF00E80339 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		065C29D31B64D8FF00E80339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		065C29D91B64D8FF00E80339 /* GoodLuckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodLuckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		065C29DE1B64D8FF00E80339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		065C29DF1B64D8FF00E80339 /* GoodLuckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodLuckTests.m; sourceTree = "<group>"; };
-		065C29EB1B64DB8F00E80339 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		065C29EB1B64DB8F00E80339 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		06D329E21B7359AD009384EF /* MyPJ.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyPJ.mm; sourceTree = "<group>"; };
+		06D329E31B7359AD009384EF /* MyPJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPJ.h; sourceTree = "<group>"; };
+		06D329E51B735FE4009384EF /* MyApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApp.h; sourceTree = "<group>"; };
+		06D329E61B735FE4009384EF /* MyApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyApp.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,8 +233,10 @@
 			children = (
 				065C29C71B64D8FF00E80339 /* AppDelegate.h */,
 				065C29CA1B64D8FF00E80339 /* ViewController.h */,
-				065C29CB1B64D8FF00E80339 /* ViewController.m */,
-				065C29EB1B64DB8F00E80339 /* AppDelegate.m */,
+				06D329E51B735FE4009384EF /* MyApp.h */,
+				06D329E61B735FE4009384EF /* MyApp.mm */,
+				065C29CB1B64D8FF00E80339 /* ViewController.mm */,
+				065C29EB1B64DB8F00E80339 /* AppDelegate.mm */,
 				065C29CD1B64D8FF00E80339 /* Main.storyboard */,
 				065C29D01B64D8FF00E80339 /* Images.xcassets */,
 				065C29D21B64D8FF00E80339 /* LaunchScreen.xib */,
@@ -243,10 +248,10 @@
 		065C29C31B64D8FF00E80339 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				06D329E21B7359AD009384EF /* MyPJ.mm */,
+				06D329E31B7359AD009384EF /* MyPJ.h */,
 				065C29C41B64D8FF00E80339 /* Info.plist */,
 				065C29C51B64D8FF00E80339 /* main.mm */,
-				06164BA61B6C6C720085D1EA /* MyApp.cpp */,
-				06164BA71B6C6C720085D1EA /* MyApp.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -367,9 +372,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				065C29CC1B64D8FF00E80339 /* ViewController.m in Sources */,
-				06164BA81B6C6C720085D1EA /* MyApp.cpp in Sources */,
-				065C29EC1B64DB8F00E80339 /* AppDelegate.m in Sources */,
+				06D329E71B735FE4009384EF /* MyApp.mm in Sources */,
+				065C29CC1B64D8FF00E80339 /* ViewController.mm in Sources */,
+				06D329E41B7359AD009384EF /* MyPJ.mm in Sources */,
+				065C29EC1B64DB8F00E80339 /* AppDelegate.mm in Sources */,
 				065C29C61B64D8FF00E80339 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"PJ_AUTOCONF=1",
 					"DEBUG=1",
@@ -516,7 +523,10 @@
 					"/Users/hojolin/Documents/whitehorse/pjproject-2.4/third_party/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = armv7;
 			};
 			name = Debug;
@@ -525,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "PJ_AUTOCONF=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -540,7 +551,9 @@
 					"/Users/hojolin/Documents/whitehorse/pjproject-2.4/third_party/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALID_ARCHS = armv7;
 			};
 			name = Release;

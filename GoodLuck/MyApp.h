@@ -2,68 +2,33 @@
 //  MyApp.h
 //  GoodLuck
 //
-//  Created by HoJolin on 15/8/1.
+//  Created by HoJolin on 15/8/6.
 //
 //
 
-#ifndef __GoodLuck__MyApp__
-#define __GoodLuck__MyApp__
+#import <Foundation/Foundation.h>
+#include "MyPJ.h"
 
-#include <stdio.h>
-#include <iostream>
-#import "pjsua2.hpp"
+#define SIP_PORT 6000
+#define LOG_LEVEL 5
 
-using namespace pj;
-using namespace std;
+@protocol MyAppObserver <NSObject>
 
-#define mUserName "9000"
-#define mPassWord "p9000"
+- (void)notifyRegState:(pjsip_status_code)code reason:(string)reason expiration:(int)expiration;
+- (void)notifyIncomingCall:(MyCall *)call;
+- (void)notifyCallState:(MyCall *)call;
+- (void)notifyCallMediaState:(MyCall *)call;
+- (void)notifyBuddyState:(MyBuddy *)buddy;
 
-#define CHAR_AT "@"
-#define SIP_PREFIX "sip:"
-#define TRANSPORT_TCP_SUFFIX ";transport=tcp"
-#define YARLUNG_SERVER_IP "121.40.49.168"
-#define YARLUNG_SERVER_PORT "6010"
-#define YARLUNG_SERVER YARLUNG_SERVER_IP ":" YARLUNG_SERVER_PORT
-#define YARLUNG_PROXY SIP_PREFIX YARLUNG_SERVER TRANSPORT_TCP_SUFFIX
-#define YARLUNG_REGISTRAR SIP_PREFIX YARLUNG_SERVER
+@end
 
-class MyAppObserver;
-class MyAccount;
-class MyAccountConfig;
+@interface MyApp : NSObject
 
-class MyLogWriter: public LogWriter {
-    public:
-    void write(const LogEntry &entry) {
-        cout << entry.msg << endl;
-    }
-};
+@property (nonatomic) id<MyAppObserver> observer;
+@property (nonatomic) MyLogWriter logWriter;
+@property (nonatomic) Endpoint ep;
+@property (nonatomic) TransportConfig sipTpConfig;
+@property (nonatomic) EpConfig epConfig;
+//@property (nonatomic) MyBuddy bud;
 
-class MyApp {
-public:
-    static Endpoint *ep;
-    static MyAppObserver *observer;
-    vector<MyAccount*> accList;
-private:
-    vector<MyAccountConfig*> accCfgs;
-    EpConfig *epConfig = new pj::EpConfig();
-    TransportConfig *sipTpConfig = new TransportConfig();
-    string appDir;
-    MyLogWriter *logWriter;
-    const string configName = "pjsua2.json";
-    const int SIP_PORT = 6000;
-    const int LOG_LEVEL = 5;    // Modified by wonder
-public:
-    void init(MyAppObserver &obs, string app_dir);
-    void init(MyAppObserver &obs, string app_dir, bool own_worker_thread);
-    MyAccount *addAcc(AccountConfig &cfg);
-    void delAcc(MyAccount *acc);
-    void buildAccConfigs();
-    void deinit();
-    static void initAccountConfigForYarlung(AccountConfig &accConfig);
-};
-
-
-
-
-#endif /* defined(__GoodLuck__MyApp__) */
+@end
