@@ -56,7 +56,7 @@ int main(int argc, char * argv[]) {
 //        account.create(accCfg);
 //        pj::Call call = pj::Call(account, -1);
 //        pj::CallOpParam prm = pj::CallOpParam(true);
-//        call.makeCall("sip:9002@121.40.49.168:6010", prm);
+//        call.makeCall("sip:9001@121.40.49.168:6010", prm);
 //        try {
 //            ep.transportCreate(PJSIP_TRANSPORT_UDP, tcfg);
 //        } catch (pj::Error &err) {

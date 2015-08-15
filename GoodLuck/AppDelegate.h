@@ -14,6 +14,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 + (MyApp*)getApp;
++ (MyCall *)getCall;
 
 @end
 

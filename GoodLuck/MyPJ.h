@@ -44,6 +44,7 @@ public:
 class MyCall: public Call {
 public:
     VideoWindow *vidWin;
+    pjsua_vid_win_id wid;
     MyCall(MyAccount &acc, int call_id);
     void onCallState(OnCallStateParam &prm);
     void onCallMediaState(OnCallMediaStateParam &prm);

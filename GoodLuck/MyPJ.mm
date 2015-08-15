@@ -66,6 +66,7 @@ void MyAccount::onIncomingCall(OnIncomingCallParam &prm) {
 
 MyCall::MyCall(MyAccount &acc, int call_id): Call(acc, call_id){
     vidWin = NULL;
+    wid = INVALID_ID;
 }
 
 void MyCall::onCallState(OnCallStateParam &prm) {
@@ -91,6 +92,7 @@ void MyCall::onCallMediaState(OnCallMediaStateParam &prm) {
     cout << "Wonder: onCallMediaState() cmiv.size=" << cmiv.size() << endl;
     for (int i = 0; i < cmiv.size(); i++) {
         CallMediaInfo cmi = cmiv[i];
+        printf("shit%i", cmi.type);
         if (cmi.type == PJMEDIA_TYPE_AUDIO && (cmi.status == PJSUA_CALL_MEDIA_ACTIVE || cmi.status == PJSUA_CALL_MEDIA_REMOTE_HOLD)) {
             // unfortunately, on Java too, the returned Media cannot be
             // downcasted to AudioMedia
@@ -99,20 +101,24 @@ void MyCall::onCallMediaState(OnCallMediaStateParam &prm) {
             // connect ports
             try {
                 cout << "Wonder: onCallMediaState() startTransmit\n";
-                [AppDelegate getApp].ep.audDevManager().getCaptureDevMedia().startTransmit(am);
-                am.startTransmit([AppDelegate getApp].ep.audDevManager().getCaptureDevMedia());
+//                am.startTransmit([AppDelegate getApp]->ep.audDevManager().getPlaybackDevMedia());
+//                [AppDelegate getApp]->ep.audDevManager().getCaptureDevMedia().startTransmit(am);
+//                [AppDelegate getApp]->ep.audDevManager().getCaptureDevMedia().startTransmit(am);
+//                am.startTransmit([AppDelegate getApp]->ep.audDevManager().getCaptureDevMedia());
             } catch (exception e) {
                 continue;
             }
         } else if (cmi.type == PJMEDIA_TYPE_VIDEO && cmi.status == PJSUA_CALL_MEDIA_ACTIVE && cmi.videoIncomingWindowId != INVALID_ID) {
             vidWin = new VideoWindow(cmi.videoIncomingWindowId);
+            wid = cmi.videoIncomingWindowId;
         }
     }
-    [[AppDelegate getApp].observer notifyIncomingCall:this];
+    [[AppDelegate getApp].observer notifyCallMediaState:this];
 }
 
 void MyCall::onStreamCreated(OnStreamCreatedParam &prm) {
     cout << "Wonder: onStreamCreated()\n";
+    
 }
 
 MyBuddy::MyBuddy(BuddyConfig &config): Buddy() {
@@ -162,7 +168,7 @@ void MyAccountConfig::readObject(ContainerNode &node){
     }
 }
 
-void MyAccountConfig::writeObject(ContainerNode &node){
+void MyAccountConfig::writeObject(ContainerNode &node) {
     try{
         ContainerNode acc_node = node.writeNewContainer("Account");
         accCfg.writeObject(acc_node);
