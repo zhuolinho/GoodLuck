@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 
 static MyApp *app;
+static MyAccount *account;
+static MyCall *call;
 
 @interface AppDelegate ()
 
@@ -21,7 +23,17 @@ static MyApp *app;
     // Override point for customization after application launch.
 
     app = [[MyApp alloc]init];
-    
+    AccountConfig accCfg;
+    [MyApp initAccountConfigForYarlung: &accCfg];    // Added by wonder
+    accCfg.natConfig.iceEnabled = true;
+    accCfg.videoConfig.autoTransmitOutgoing = true;
+    accCfg.videoConfig.autoShowIncoming = true;
+    account = [app addAcc: accCfg];
+//    BuddyConfig cfg;
+//    cfg.uri = [MyApp makeUriFromUsername: "9001"];
+//    cfg.subscribe = true;
+//    account->addBuddy(cfg);
+    call = new MyCall(*(account), -1);
     return YES;
 }
 
@@ -47,8 +59,12 @@ static MyApp *app;
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-+ (MyApp*)getApp {
++ (MyApp *)getApp {
     return app;
+}
+
++ (MyCall *)getCall {
+    return call;
 }
 
 @end
