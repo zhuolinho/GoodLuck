@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>38549A2D-77C7-4811-8579-FA80BF88B0DB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GoodLuck</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EAD0A620BB93A446AA00A087733A02919980A4EF</key>
+		<string>github.com:zhuolinho/GoodLuck.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GoodLuck.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EAD0A620BB93A446AA00A087733A02919980A4EF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:zhuolinho/GoodLuck.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EAD0A620BB93A446AA00A087733A02919980A4EF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EAD0A620BB93A446AA00A087733A02919980A4EF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GoodLuck</string>
+		</dict>
+	</array>
+</dict>
+</plist>
