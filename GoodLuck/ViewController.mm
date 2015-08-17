@@ -24,6 +24,22 @@
 @end
 
 @implementation ViewController
+- (IBAction)kkkkkk:(UIButton *)sender {
+//    String buddy_uri = item.get("uri");
+//    
+//    MyCall call = new MyCall(account, -1);
+    ascall = [AppDelegate getCall];
+    
+    CallOpParam prm(true);
+    prm.opt.audioCount = 1;
+    prm.opt.videoCount = 0;
+    
+    try {
+        ascall->makeCall("sip:9002@121.40.49.168:6010", prm);
+    } catch (exception e) {
+        return;
+    }
+}
 
 - (IBAction)ffff:(UIButton *)sender {
 //    pj::CallOpParam prm = pj::CallOpParam(true);

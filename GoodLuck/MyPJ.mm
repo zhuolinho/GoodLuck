@@ -103,7 +103,6 @@ void MyCall::onCallMediaState(OnCallMediaStateParam &prm) {
                 cout << "Wonder: onCallMediaState() startTransmit\n";
 //                am.startTransmit([AppDelegate getApp]->ep.audDevManager().getPlaybackDevMedia());
 //                [AppDelegate getApp]->ep.audDevManager().getCaptureDevMedia().startTransmit(am);
-//                [AppDelegate getApp]->ep.audDevManager().getCaptureDevMedia().startTransmit(am);
 //                am.startTransmit([AppDelegate getApp]->ep.audDevManager().getCaptureDevMedia());
             } catch (exception e) {
                 continue;
