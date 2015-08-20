@@ -39,15 +39,21 @@
 		0634E9841B6686770001B2C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9831B6686770001B2C3 /* QuartzCore.framework */; };
 		0634E9861B66867D0001B2C3 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9851B66867D0001B2C3 /* CoreVideo.framework */; };
 		0634E9881B6686830001B2C3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9871B6686830001B2C3 /* CoreMedia.framework */; };
+		0655CAF71B86397E000AFE17 /* pjsua_app_cli.c in Sources */ = {isa = PBXBuildFile; fileRef = 0655CAF21B86397E000AFE17 /* pjsua_app_cli.c */; };
+		0655CAF81B86397E000AFE17 /* pjsua_app_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0655CAF31B86397E000AFE17 /* pjsua_app_common.c */; };
+		0655CAF91B86397E000AFE17 /* pjsua_app_config.c in Sources */ = {isa = PBXBuildFile; fileRef = 0655CAF41B86397E000AFE17 /* pjsua_app_config.c */; };
+		0655CAFA1B86397E000AFE17 /* pjsua_app_legacy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0655CAF51B86397E000AFE17 /* pjsua_app_legacy.c */; };
+		0655CAFB1B86397E000AFE17 /* pjsua_app.c in Sources */ = {isa = PBXBuildFile; fileRef = 0655CAF61B86397E000AFE17 /* pjsua_app.c */; };
+		0655CAFF1B8639A2000AFE17 /* Calling.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0655CAFD1B8639A2000AFE17 /* Calling.storyboard */; };
+		0655CB021B8639AE000AFE17 /* CallingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0655CB011B8639AE000AFE17 /* CallingViewController.m */; };
+		0655CB041B8639B7000AFE17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0655CB031B8639B7000AFE17 /* AppDelegate.m */; };
+		0655CB091B8639C2000AFE17 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0655CB061B8639C1000AFE17 /* MainTabBarController.m */; };
+		0655CB0A1B8639C2000AFE17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0655CB081B8639C2000AFE17 /* ViewController.m */; };
 		065C29C61B64D8FF00E80339 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 065C29C51B64D8FF00E80339 /* main.mm */; };
-		065C29CC1B64D8FF00E80339 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 065C29CB1B64D8FF00E80339 /* ViewController.mm */; };
 		065C29CF1B64D8FF00E80339 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065C29CD1B64D8FF00E80339 /* Main.storyboard */; };
 		065C29D11B64D8FF00E80339 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065C29D01B64D8FF00E80339 /* Images.xcassets */; };
 		065C29D41B64D8FF00E80339 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065C29D21B64D8FF00E80339 /* LaunchScreen.xib */; };
 		065C29E01B64D8FF00E80339 /* GoodLuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C29DF1B64D8FF00E80339 /* GoodLuckTests.m */; };
-		065C29EC1B64DB8F00E80339 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 065C29EB1B64DB8F00E80339 /* AppDelegate.mm */; };
-		06D329E41B7359AD009384EF /* MyPJ.mm in Sources */ = {isa = PBXBuildFile; fileRef = 06D329E21B7359AD009384EF /* MyPJ.mm */; };
-		06D329E71B735FE4009384EF /* MyApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 06D329E61B735FE4009384EF /* MyApp.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,23 +99,29 @@
 		0634E9831B6686770001B2C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0634E9851B66867D0001B2C3 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		0634E9871B6686830001B2C3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0655CAF21B86397E000AFE17 /* pjsua_app_cli.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pjsua_app_cli.c; path = pjsua/pjsua_app_cli.c; sourceTree = "<group>"; };
+		0655CAF31B86397E000AFE17 /* pjsua_app_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pjsua_app_common.c; path = pjsua/pjsua_app_common.c; sourceTree = "<group>"; };
+		0655CAF41B86397E000AFE17 /* pjsua_app_config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pjsua_app_config.c; path = pjsua/pjsua_app_config.c; sourceTree = "<group>"; };
+		0655CAF51B86397E000AFE17 /* pjsua_app_legacy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pjsua_app_legacy.c; path = pjsua/pjsua_app_legacy.c; sourceTree = "<group>"; };
+		0655CAF61B86397E000AFE17 /* pjsua_app.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pjsua_app.c; path = pjsua/pjsua_app.c; sourceTree = "<group>"; };
+		0655CAFE1B8639A2000AFE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GoodLuck/Base.lproj/Calling.storyboard; sourceTree = "<group>"; };
+		0655CB001B8639AE000AFE17 /* CallingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallingViewController.h; path = GoodLuck/Calling/CallingViewController.h; sourceTree = "<group>"; };
+		0655CB011B8639AE000AFE17 /* CallingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallingViewController.m; path = GoodLuck/Calling/CallingViewController.m; sourceTree = "<group>"; };
+		0655CB031B8639B7000AFE17 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0655CB051B8639C1000AFE17 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = GoodLuck/Main/MainTabBarController.h; sourceTree = "<group>"; };
+		0655CB061B8639C1000AFE17 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabBarController.m; path = GoodLuck/Main/MainTabBarController.m; sourceTree = "<group>"; };
+		0655CB071B8639C1000AFE17 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = GoodLuck/Main/ViewController.h; sourceTree = "<group>"; };
+		0655CB081B8639C2000AFE17 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = GoodLuck/Main/ViewController.m; sourceTree = "<group>"; };
 		065C29C01B64D8FF00E80339 /* GoodLuck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodLuck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065C29C41B64D8FF00E80339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		065C29C51B64D8FF00E80339 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		065C29C71B64D8FF00E80339 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		065C29CA1B64D8FF00E80339 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		065C29CB1B64D8FF00E80339 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		065C29CE1B64D8FF00E80339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		065C29D01B64D8FF00E80339 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		065C29D31B64D8FF00E80339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		065C29D91B64D8FF00E80339 /* GoodLuckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodLuckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		065C29DE1B64D8FF00E80339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		065C29DF1B64D8FF00E80339 /* GoodLuckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodLuckTests.m; sourceTree = "<group>"; };
-		065C29EB1B64DB8F00E80339 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
-		06D329E21B7359AD009384EF /* MyPJ.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyPJ.mm; sourceTree = "<group>"; };
-		06D329E31B7359AD009384EF /* MyPJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPJ.h; sourceTree = "<group>"; };
-		06D329E51B735FE4009384EF /* MyApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApp.h; sourceTree = "<group>"; };
-		06D329E61B735FE4009384EF /* MyApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyApp.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,9 +220,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0655CAFC1B863982000AFE17 /* pjsua */ = {
+			isa = PBXGroup;
+			children = (
+				0655CAF21B86397E000AFE17 /* pjsua_app_cli.c */,
+				0655CAF31B86397E000AFE17 /* pjsua_app_common.c */,
+				0655CAF41B86397E000AFE17 /* pjsua_app_config.c */,
+				0655CAF51B86397E000AFE17 /* pjsua_app_legacy.c */,
+				0655CAF61B86397E000AFE17 /* pjsua_app.c */,
+			);
+			name = pjsua;
+			sourceTree = "<group>";
+		};
+		0655CB0B1B8639F2000AFE17 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0655CB051B8639C1000AFE17 /* MainTabBarController.h */,
+				0655CB061B8639C1000AFE17 /* MainTabBarController.m */,
+				0655CB071B8639C1000AFE17 /* ViewController.h */,
+				0655CB081B8639C2000AFE17 /* ViewController.m */,
+			);
+			name = Main;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0655CB0C1B8639FC000AFE17 /* Calling */ = {
+			isa = PBXGroup;
+			children = (
+				0655CB001B8639AE000AFE17 /* CallingViewController.h */,
+				0655CB011B8639AE000AFE17 /* CallingViewController.m */,
+			);
+			name = Calling;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		065C29B71B64D8FF00E80339 = {
 			isa = PBXGroup;
 			children = (
+				0655CAFC1B863982000AFE17 /* pjsua */,
 				0634E9891B66868F0001B2C3 /* Frameworks */,
 				065C29C21B64D8FF00E80339 /* GoodLuck */,
 				065C29DC1B64D8FF00E80339 /* GoodLuckTests */,
@@ -231,12 +278,11 @@
 		065C29C21B64D8FF00E80339 /* GoodLuck */ = {
 			isa = PBXGroup;
 			children = (
+				0655CB0B1B8639F2000AFE17 /* Main */,
+				0655CB0C1B8639FC000AFE17 /* Calling */,
+				0655CB031B8639B7000AFE17 /* AppDelegate.m */,
 				065C29C71B64D8FF00E80339 /* AppDelegate.h */,
-				065C29CA1B64D8FF00E80339 /* ViewController.h */,
-				06D329E51B735FE4009384EF /* MyApp.h */,
-				06D329E61B735FE4009384EF /* MyApp.mm */,
-				065C29CB1B64D8FF00E80339 /* ViewController.mm */,
-				065C29EB1B64DB8F00E80339 /* AppDelegate.mm */,
+				0655CAFD1B8639A2000AFE17 /* Calling.storyboard */,
 				065C29CD1B64D8FF00E80339 /* Main.storyboard */,
 				065C29D01B64D8FF00E80339 /* Images.xcassets */,
 				065C29D21B64D8FF00E80339 /* LaunchScreen.xib */,
@@ -248,8 +294,6 @@
 		065C29C31B64D8FF00E80339 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				06D329E21B7359AD009384EF /* MyPJ.mm */,
-				06D329E31B7359AD009384EF /* MyPJ.h */,
 				065C29C41B64D8FF00E80339 /* Info.plist */,
 				065C29C51B64D8FF00E80339 /* main.mm */,
 			);
@@ -355,6 +399,7 @@
 				065C29CF1B64D8FF00E80339 /* Main.storyboard in Resources */,
 				065C29D41B64D8FF00E80339 /* LaunchScreen.xib in Resources */,
 				065C29D11B64D8FF00E80339 /* Images.xcassets in Resources */,
+				0655CAFF1B8639A2000AFE17 /* Calling.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,11 +417,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06D329E71B735FE4009384EF /* MyApp.mm in Sources */,
-				065C29CC1B64D8FF00E80339 /* ViewController.mm in Sources */,
-				06D329E41B7359AD009384EF /* MyPJ.mm in Sources */,
-				065C29EC1B64DB8F00E80339 /* AppDelegate.mm in Sources */,
+				0655CB021B8639AE000AFE17 /* CallingViewController.m in Sources */,
+				0655CAFA1B86397E000AFE17 /* pjsua_app_legacy.c in Sources */,
+				0655CB091B8639C2000AFE17 /* MainTabBarController.m in Sources */,
+				0655CAFB1B86397E000AFE17 /* pjsua_app.c in Sources */,
+				0655CB0A1B8639C2000AFE17 /* ViewController.m in Sources */,
+				0655CAF71B86397E000AFE17 /* pjsua_app_cli.c in Sources */,
+				0655CB041B8639B7000AFE17 /* AppDelegate.m in Sources */,
+				0655CAF81B86397E000AFE17 /* pjsua_app_common.c in Sources */,
 				065C29C61B64D8FF00E80339 /* main.mm in Sources */,
+				0655CAF91B86397E000AFE17 /* pjsua_app_config.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +449,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0655CAFD1B8639A2000AFE17 /* Calling.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0655CAFE1B8639A2000AFE17 /* Base */,
+			);
+			name = Calling.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		065C29CD1B64D8FF00E80339 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -513,6 +572,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					./include,
+					./pjsua,
 				);
 				INFOPLIST_FILE = GoodLuck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -541,6 +601,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					./include,
+					./pjsua,
 				);
 				INFOPLIST_FILE = GoodLuck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MyApp.h"
+#import "CallingViewController.h"
+
+@protocol AppObserver <NSObject>
+
+- (void)receiveMsg: (const char *)msg;
+
+@end
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-+ (MyApp*)getApp;
-+ (MyCall *)getCall;
+@property (nonatomic) CallingViewController *currentCall;
 
 @end
 
