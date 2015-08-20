@@ -10,5 +10,8 @@
 
 @interface ViewController : UIViewController
 
+//@property (weak, nonatomic) IBOutlet UIImageView *imageWindow;
+@property (weak, nonatomic) IBOutlet UIButton *ac;
+
 @end
 
