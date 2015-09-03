@@ -10,6 +10,7 @@
 #include "pjsua_app_common.h"
 #import "CallingViewController.h"
 #define THIS_FILE "ViewController.m"
+void ui_add_account(pjsua_transport_config *rtp_cfg, char *id, char *uname, char *passwd);
 
 @interface ViewController ()
 
@@ -19,33 +20,42 @@
 
 @implementation ViewController
 - (IBAction)kkkkkk:(UIButton *)sender {
-    pjsua_acc_config acc_cfg;
-    pj_status_t status;
-    pjsua_acc_config_default(&acc_cfg);
-    acc_cfg.id = pj_str("sip:9001@121.40.49.168:6010");
-    acc_cfg.reg_uri = pj_str("sip:121.40.49.168:6010");
-    acc_cfg.cred_count = 1;
-    acc_cfg.cred_info[0].scheme = pj_str("Digest");
-    acc_cfg.cred_info[0].realm = pj_str("*");
-    acc_cfg.cred_info[0].username = pj_str("9001");
-    acc_cfg.cred_info[0].data_type = 0;
-    acc_cfg.cred_info[0].data = pj_str("p9001");
-    
-    acc_cfg.rtp_cfg = app_config.rtp_cfg;
-    app_config_init_video(&acc_cfg);
-    
+    char str[100] = "sip:";
     pj_thread_desc  desc;
     pj_thread_t*    thread = 0;
-    
     if (!pj_thread_is_registered())
     {
         pj_thread_register(NULL, desc, &thread);
     }
+    ui_add_account(&app_config.rtp_cfg, strcat(str, "9000"), "9000", "p9000");
     
-    status = pjsua_acc_add(&acc_cfg, PJ_TRUE, NULL);
-    if (status != PJ_SUCCESS) {
-        pjsua_perror(THIS_FILE, "Error adding new account", status);
-    }
+//    pjsua_acc_config acc_cfg;
+//    pj_status_t status;
+//    pjsua_acc_config_default(&acc_cfg);
+//    acc_cfg.id = pj_str("sip:9001@121.40.49.168:6010");
+//    acc_cfg.reg_uri = pj_str("sip:121.40.49.168:6010");
+//    acc_cfg.cred_count = 1;
+//    acc_cfg.cred_info[0].scheme = pj_str("Digest");
+//    acc_cfg.cred_info[0].realm = pj_str("*");
+//    acc_cfg.cred_info[0].username = pj_str("9001");
+//    acc_cfg.cred_info[0].data_type = 0;
+//    acc_cfg.cred_info[0].data = pj_str("p9001");
+//    
+//    acc_cfg.rtp_cfg = app_config.rtp_cfg;
+//    app_config_init_video(&acc_cfg);
+//    
+//    pj_thread_desc  desc;
+//    pj_thread_t*    thread = 0;
+//    
+//    if (!pj_thread_is_registered())
+//    {
+//        pj_thread_register(NULL, desc, &thread);
+//    }
+//    
+//    status = pjsua_acc_add(&acc_cfg, PJ_TRUE, NULL);
+//    if (status != PJ_SUCCESS) {
+//        pjsua_perror(THIS_FILE, "Error adding new account", status);
+//    }
 }
 
 - (IBAction)ffff:(UIButton *)sender {
