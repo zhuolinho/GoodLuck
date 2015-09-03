@@ -12,6 +12,8 @@
 	<dict>
 		<key>EAD0A620BB93A446AA00A087733A02919980A4EF</key>
 		<string>github.com:zhuolinho/GoodLuck.git</string>
+		<key>EF37B9AD8829F2BD5BD5E5FDF8FA27BFB54A4A01</key>
+		<string>120.24.166.37:whitehorse</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>GoodLuck.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>EAD0A620BB93A446AA00A087733A02919980A4EF</key>
 		<string>../..</string>
+		<key>EF37B9AD8829F2BD5BD5E5FDF8FA27BFB54A4A01</key>
+		<string>../../../whitehorse</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:zhuolinho/GoodLuck.git</string>
@@ -35,6 +39,14 @@
 			<string>EAD0A620BB93A446AA00A087733A02919980A4EF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GoodLuck</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EF37B9AD8829F2BD5BD5E5FDF8FA27BFB54A4A01</string>
+			<key>IDESourceControlWCCName</key>
+			<string>whitehorse</string>
 		</dict>
 	</array>
 </dict>

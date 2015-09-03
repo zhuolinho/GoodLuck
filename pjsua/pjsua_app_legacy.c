@@ -884,29 +884,30 @@ static void ui_add_buddy()
     }
 }
 
-static void ui_add_account(pjsua_transport_config *rtp_cfg)
+void ui_add_account(pjsua_transport_config *rtp_cfg, char *id, char *uname, char *passwd)
 {
-    char id[80], registrar[80], realm[80], uname[80], passwd[30];
+//    char id[80], registrar[80], realm[80], uname[80], passwd[30];
     pjsua_acc_config acc_cfg;
     pj_status_t status;
 
-    if (!simple_input("Your SIP URL:", id, sizeof(id)))
-	return;
-    if (!simple_input("URL of the registrar:", registrar, sizeof(registrar)))
-	return;
-    if (!simple_input("Auth Realm:", realm, sizeof(realm)))
-	return;
-    if (!simple_input("Auth Username:", uname, sizeof(uname)))
-	return;
-    if (!simple_input("Auth Password:", passwd, sizeof(passwd)))
-	return;
+//    if (!simple_input("Your SIP URL:", id, sizeof(id)))
+//	return;
+//    if (!simple_input("URL of the registrar:", registrar, sizeof(registrar)))
+//	return;
+//    if (!simple_input("Auth Realm:", realm, sizeof(realm)))
+//	return;
+//    if (!simple_input("Auth Username:", uname, sizeof(uname)))
+//	return;
+//    if (!simple_input("Auth Password:", passwd, sizeof(passwd)))
+//	return;
 
     pjsua_acc_config_default(&acc_cfg);
+    strcat(id, "@121.40.49.168:6010");
     acc_cfg.id = pj_str(id);
-    acc_cfg.reg_uri = pj_str(registrar);
+    acc_cfg.reg_uri = pj_str("sip:121.40.49.168:6010");
     acc_cfg.cred_count = 1;
     acc_cfg.cred_info[0].scheme = pj_str("Digest");
-    acc_cfg.cred_info[0].realm = pj_str(realm);
+    acc_cfg.cred_info[0].realm = pj_str("*");
     acc_cfg.cred_info[0].username = pj_str(uname);
     acc_cfg.cred_info[0].data_type = 0;
     acc_cfg.cred_info[0].data = pj_str(passwd);
@@ -1762,7 +1763,7 @@ void legacy_main()
 	    if (menuin[1] == 'b') {
 		ui_add_buddy();
 	    } else if (menuin[1] == 'a') {
-		ui_add_account(&app_config.rtp_cfg);
+//		ui_add_account(&app_config.rtp_cfg);
 	    } else {
 		printf("Invalid input %s\n", menuin);
 	    }

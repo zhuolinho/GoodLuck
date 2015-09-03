@@ -37,7 +37,7 @@ const char *pjsua_app_def_argv[] = { "pjsua",
 				     /* Can't reuse address on E52 */
 				     "--cli-telnet-port=0",
 #else
-//				     "--cli-telnet-port=2323",
+				     "--cli-telnet-port=2323",
 #endif
 #if defined(PJ_CONFIG_BB10) && PJ_CONFIG_BB10
 			             "--add-buddy=sip:169.254.0.2",

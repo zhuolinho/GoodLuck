@@ -119,11 +119,19 @@ static void pjsuaOnAppConfigCb(pjsua_app_config *cfg)
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    MainTabBarController *vc = (MainTabBarController *)[mainStoryboard instantiateInitialViewController];
-    self.window.rootViewController = vc;
-    observer = vc;
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString *userId = [ud objectForKey:@"userId"];
+    if (userId) {
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        MainTabBarController *vc = (MainTabBarController *)[mainStoryboard instantiateInitialViewController];
+        self.window.rootViewController = vc;
+        observer = vc;
+    }
+    else {
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+        UIViewController *vc = [mainStoryboard instantiateInitialViewController];
+        self.window.rootViewController = vc;
+    }
     [self.window makeKeyAndVisible];
     app = self;
     [NSThread detachNewThreadSelector:@selector(pjsuaStart) toTarget:self withObject:nil];
