@@ -11,6 +11,7 @@
 #import "API.h"
 #import "ScanViewController.h"
 #import "MainTabBarController.h"
+#import "tabBarController.h"
 
 @interface LoginViewController ()<APIProtocol>
 {
@@ -56,13 +57,14 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([status_code  isEqual: @"0"]) {
             NSDictionary *res = data[@"data"];
+            NSLog(@"%@",res);
             NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
             [ud setObject:res[@"userId"] forKey:@"userId"];
             [ud setObject:res[@"userName"] forKey:@"userName"];
             [ud setObject:res[@"password"] forKey:@"password"];
             [ud synchronize];
-            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            MainTabBarController *vc = (MainTabBarController *)[mainStoryboard instantiateInitialViewController];
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"mainTabBar" bundle:nil];
+            tabBarController *vc = (tabBarController *)[mainStoryboard instantiateInitialViewController];
             [self presentViewController:vc animated:true completion:nil];
         }
         else if (ifScan == 1) {

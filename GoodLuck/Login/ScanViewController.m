@@ -10,19 +10,16 @@
 #import <AVFoundation/AVFoundation.h>
 #import "API.h"
 #import "MainTabBarController.h"
+#import "tabBarController.h"
 
 @interface ScanViewController ()<AVCaptureMetadataOutputObjectsDelegate, APIProtocol, UIAlertViewDelegate> {
     API *myAPI;
 }
 
 @property ( strong , nonatomic ) AVCaptureDevice * device;
-
 @property ( strong , nonatomic ) AVCaptureDeviceInput * input;
-
 @property ( strong , nonatomic ) AVCaptureMetadataOutput * output;
-
 @property ( strong , nonatomic ) AVCaptureSession * session;
-
 @property ( strong , nonatomic ) AVCaptureVideoPreviewLayer * preview;
 
 @end
@@ -114,8 +111,8 @@
             [ud setObject:res[@"userName"] forKey:@"userName"];
             [ud setObject:res[@"password"] forKey:@"password"];
             [ud synchronize];
-            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            MainTabBarController *vc = (MainTabBarController *)[mainStoryboard instantiateInitialViewController];
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"mainTabBar" bundle:nil];
+            tabBarController *vc = (tabBarController *)[mainStoryboard instantiateInitialViewController];
             [self presentViewController:vc animated:true completion:nil];
         }
         else {

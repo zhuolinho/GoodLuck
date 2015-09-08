@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0622A5E51B88651900198A68 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 0622A5E41B88651900198A68 /* API.m */; };
-		0622A5E81B8865E100198A68 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0622A5E71B8865E100198A68 /* TestViewController.m */; };
 		0634E9401B6682810001B2C3 /* libg7221codec-arm-apple-darwin9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9311B6682810001B2C3 /* libg7221codec-arm-apple-darwin9.a */; };
 		0634E9411B6682810001B2C3 /* libgsmcodec-arm-apple-darwin9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9321B6682810001B2C3 /* libgsmcodec-arm-apple-darwin9.a */; };
 		0634E9421B6682810001B2C3 /* libilbccodec-arm-apple-darwin9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634E9331B6682810001B2C3 /* libilbccodec-arm-apple-darwin9.a */; };
@@ -59,6 +58,10 @@
 		0696CCB71B97E86F00BAD01D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0696CCB51B97E86F00BAD01D /* Login.storyboard */; };
 		06DF63A41B97F73C003D5F19 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF63A11B97F73C003D5F19 /* LoginViewController.m */; };
 		06DF63A51B97F73C003D5F19 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF63A31B97F73C003D5F19 /* ScanViewController.m */; };
+		968A974C1B986C7700AD5E2F /* mainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968A974B1B986C7700AD5E2F /* mainTabBar.storyboard */; };
+		968A974F1B98AD0800AD5E2F /* PersonalSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A974E1B98AD0800AD5E2F /* PersonalSettingController.m */; };
+		968A97521B98B37800AD5E2F /* tabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A97511B98B37800AD5E2F /* tabBarController.m */; };
+		968A97551B993A4A00AD5E2F /* MonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A97541B993A4A00AD5E2F /* MonitorController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +77,6 @@
 /* Begin PBXFileReference section */
 		0622A5E31B88651900198A68 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		0622A5E41B88651900198A68 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
-		0622A5E61B8865E100198A68 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		0622A5E71B8865E100198A68 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		0634E9311B6682810001B2C3 /* libg7221codec-arm-apple-darwin9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libg7221codec-arm-apple-darwin9.a"; path = "lib/libg7221codec-arm-apple-darwin9.a"; sourceTree = "<group>"; };
 		0634E9321B6682810001B2C3 /* libgsmcodec-arm-apple-darwin9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgsmcodec-arm-apple-darwin9.a"; path = "lib/libgsmcodec-arm-apple-darwin9.a"; sourceTree = "<group>"; };
 		0634E9331B6682810001B2C3 /* libilbccodec-arm-apple-darwin9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libilbccodec-arm-apple-darwin9.a"; path = "lib/libilbccodec-arm-apple-darwin9.a"; sourceTree = "<group>"; };
@@ -136,6 +137,13 @@
 		06DF63A11B97F73C003D5F19 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		06DF63A21B97F73C003D5F19 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		06DF63A31B97F73C003D5F19 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		968A974B1B986C7700AD5E2F /* mainTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainTabBar.storyboard; sourceTree = "<group>"; };
+		968A974D1B98AD0800AD5E2F /* PersonalSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalSettingController.h; sourceTree = "<group>"; };
+		968A974E1B98AD0800AD5E2F /* PersonalSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalSettingController.m; sourceTree = "<group>"; };
+		968A97501B98B37800AD5E2F /* tabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabBarController.h; sourceTree = "<group>"; };
+		968A97511B98B37800AD5E2F /* tabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabBarController.m; sourceTree = "<group>"; };
+		968A97531B993A4A00AD5E2F /* MonitorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorController.h; sourceTree = "<group>"; };
+		968A97541B993A4A00AD5E2F /* MonitorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,8 +260,6 @@
 				0655CB051B8639C1000AFE17 /* MainTabBarController.h */,
 				0655CB061B8639C1000AFE17 /* MainTabBarController.m */,
 				065C29CD1B64D8FF00E80339 /* Main.storyboard */,
-				0622A5E61B8865E100198A68 /* TestViewController.h */,
-				0622A5E71B8865E100198A68 /* TestViewController.m */,
 				0655CB071B8639C1000AFE17 /* ViewController.h */,
 				0655CB081B8639C2000AFE17 /* ViewController.m */,
 			);
@@ -296,13 +302,14 @@
 		065C29C21B64D8FF00E80339 /* GoodLuck */ = {
 			isa = PBXGroup;
 			children = (
+				968A974A1B986C5800AD5E2F /* MainTabBar */,
 				0655CB0B1B8639F2000AFE17 /* Main */,
 				0655CB0C1B8639FC000AFE17 /* Calling */,
 				06DF639F1B97F73C003D5F19 /* Login */,
 				0655CB031B8639B7000AFE17 /* AppDelegate.m */,
+				065C29C71B64D8FF00E80339 /* AppDelegate.h */,
 				0622A5E31B88651900198A68 /* API.h */,
 				0622A5E41B88651900198A68 /* API.m */,
-				065C29C71B64D8FF00E80339 /* AppDelegate.h */,
 				065C29D01B64D8FF00E80339 /* Images.xcassets */,
 				065C29D21B64D8FF00E80339 /* LaunchScreen.xib */,
 				065C29C31B64D8FF00E80339 /* Supporting Files */,
@@ -339,13 +346,27 @@
 		06DF639F1B97F73C003D5F19 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				06DF63A31B97F73C003D5F19 /* ScanViewController.m */,
 				0696CCB51B97E86F00BAD01D /* Login.storyboard */,
 				06DF63A01B97F73C003D5F19 /* LoginViewController.h */,
 				06DF63A11B97F73C003D5F19 /* LoginViewController.m */,
 				06DF63A21B97F73C003D5F19 /* ScanViewController.h */,
+				06DF63A31B97F73C003D5F19 /* ScanViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		968A974A1B986C5800AD5E2F /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				968A974B1B986C7700AD5E2F /* mainTabBar.storyboard */,
+				968A974D1B98AD0800AD5E2F /* PersonalSettingController.h */,
+				968A974E1B98AD0800AD5E2F /* PersonalSettingController.m */,
+				968A97501B98B37800AD5E2F /* tabBarController.h */,
+				968A97511B98B37800AD5E2F /* tabBarController.m */,
+				968A97531B993A4A00AD5E2F /* MonitorController.h */,
+				968A97541B993A4A00AD5E2F /* MonitorController.m */,
+			);
+			path = MainTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +451,7 @@
 				065C29CF1B64D8FF00E80339 /* Main.storyboard in Resources */,
 				065C29D41B64D8FF00E80339 /* LaunchScreen.xib in Resources */,
 				065C29D11B64D8FF00E80339 /* Images.xcassets in Resources */,
+				968A974C1B986C7700AD5E2F /* mainTabBar.storyboard in Resources */,
 				0696CCB71B97E86F00BAD01D /* Login.storyboard in Resources */,
 				0655CAFF1B8639A2000AFE17 /* Calling.storyboard in Resources */,
 			);
@@ -455,12 +477,14 @@
 				0655CAFA1B86397E000AFE17 /* pjsua_app_legacy.c in Sources */,
 				0655CB091B8639C2000AFE17 /* MainTabBarController.m in Sources */,
 				0655CAFB1B86397E000AFE17 /* pjsua_app.c in Sources */,
+				968A974F1B98AD0800AD5E2F /* PersonalSettingController.m in Sources */,
 				0655CB0A1B8639C2000AFE17 /* ViewController.m in Sources */,
-				0622A5E81B8865E100198A68 /* TestViewController.m in Sources */,
+				968A97551B993A4A00AD5E2F /* MonitorController.m in Sources */,
 				0655CAF71B86397E000AFE17 /* pjsua_app_cli.c in Sources */,
 				0655CB041B8639B7000AFE17 /* AppDelegate.m in Sources */,
 				0655CAF81B86397E000AFE17 /* pjsua_app_common.c in Sources */,
 				06DF63A51B97F73C003D5F19 /* ScanViewController.m in Sources */,
+				968A97521B98B37800AD5E2F /* tabBarController.m in Sources */,
 				065C29C61B64D8FF00E80339 /* main.mm in Sources */,
 				0655CAF91B86397E000AFE17 /* pjsua_app_config.c in Sources */,
 			);

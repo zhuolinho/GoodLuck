@@ -1448,6 +1448,7 @@ static void default_config()
     cfg->playback_lat = PJMEDIA_SND_DEFAULT_PLAY_LATENCY;
     cfg->ringback_slot = PJSUA_INVALID_ID;
     cfg->ring_slot = PJSUA_INVALID_ID;
+    cfg->auto_answer = 200;
 
     for (i=0; i<PJ_ARRAY_SIZE(cfg->acc_cfg); ++i)
 	pjsua_acc_config_default(&cfg->acc_cfg[i]);

@@ -17,7 +17,7 @@ static NSMutableDictionary *picDic;
     NSURL *url = [NSURL URLWithString:str];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
-    [request setValue:@"1000912345" forHTTPHeaderField:@"uuid"];
+    [request setValue:@"1000912389" forHTTPHeaderField:@"uuid"];
 //    NSDictionary *json = @{@"userName" : @"123", @"pasword" : @"789"};
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
     request.HTTPBody = data;

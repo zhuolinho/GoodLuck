@@ -61,7 +61,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="扫描框" translatesAutoresizingMaskIntoConstraints="NO" id="iP8-pC-cl6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanWindow" translatesAutoresizingMaskIntoConstraints="NO" id="iP8-pC-cl6">
                                 <rect key="frame" x="50" y="174" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="Q64-yS-bFk"/>
@@ -101,7 +101,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="扫描框" width="235" height="235"/>
+        <image name="scanWindow" width="235" height="235"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

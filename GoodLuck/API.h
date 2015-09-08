@@ -18,6 +18,7 @@
 
 - (void)regScan:(NSString *)username password:(NSString *)password;
 - (void)login;
+
 //- (void)post:(NSString *)action dic:(NSDictionary *)dic;
 + (UIImage *)getPicByKey:(NSString *)key;
 + (void)setPicByKey:(NSString *)key pic:(UIImage *)pic;

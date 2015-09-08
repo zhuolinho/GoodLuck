@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
+#import "tabBarController.h"
 
 #include "pjsua_app.h"
 #include "pjsua_app_config.h"
@@ -117,13 +118,23 @@ static void pjsuaOnAppConfigCb(pjsua_app_config *cfg)
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //navigation bar
+    UINavigationBar *bar=[UINavigationBar appearance];
+//    NSString *backGroundColor = @"#2ea7e0";
+    [bar setTranslucent:YES];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigation-bar.png"]  forBarMetrics:UIBarMetricsDefault];
+    bar.barStyle = UIStatusBarStyleDefault;
+    
+    [bar setTintColor:[UIColor whiteColor]];
+    [bar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSString *userId = [ud objectForKey:@"userId"];
     if (userId) {
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        MainTabBarController *vc = (MainTabBarController *)[mainStoryboard instantiateInitialViewController];
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"mainTabBar" bundle:nil];
+        tabBarController *vc = (tabBarController *)[mainStoryboard instantiateInitialViewController];
         self.window.rootViewController = vc;
         observer = vc;
     }
@@ -139,7 +150,26 @@ static void pjsuaOnAppConfigCb(pjsua_app_config *cfg)
     {
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
+    
     return YES;
+}
+
+- (UIColor *) stringTOColor:(NSString *)str
+{
+    if (!str || [str isEqualToString:@""]) {
+        return nil;
+    }
+    unsigned red,green,blue;
+    NSRange range;
+    range.length = 2;
+    range.location = 1;
+    [[NSScanner scannerWithString:[str substringWithRange:range]] scanHexInt:&red];
+    range.location = 3;
+    [[NSScanner scannerWithString:[str substringWithRange:range]] scanHexInt:&green];
+    range.location = 5;
+    [[NSScanner scannerWithString:[str substringWithRange:range]] scanHexInt:&blue];
+    UIColor *color= [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:1];
+    return color;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -220,7 +250,7 @@ pj_bool_t showNotification(pjsua_call_id call_id)
 //    notification.soundName = UILocalNotificationDefaultSoundName;
 //    //发送通知
 //    [[UIApplication sharedApplication]scheduleLocalNotification:notification];
-    return PJ_FALSE;
+    return PJ_TRUE;
 }
 
 void displayWindow(pjsua_vid_win_id wid)
