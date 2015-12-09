@@ -870,11 +870,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pjsua/pjsua_app.c"
-            timestampString = "463412717.146664"
+            timestampString = "470905322.300529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "306"
+            endingLineNumber = "306"
             landmarkName = "on_incoming_call()"
             landmarkType = "7">
          </BreakpointContent>
@@ -886,11 +886,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pjsua/pjsua_app.c"
-            timestampString = "463412719.980277"
+            timestampString = "470905322.300529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
             landmarkName = "on_incoming_call()"
             landmarkType = "7">
          </BreakpointContent>
@@ -902,12 +902,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pjsua/pjsua_app.c"
-            timestampString = "463412750.670554"
+            timestampString = "470905322.300529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
             landmarkName = "on_incoming_call()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pjsua/pjsua_app.c"
+            timestampString = "470905322.300529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "573"
+            endingLineNumber = "573"
+            landmarkName = "on_call_media_state()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

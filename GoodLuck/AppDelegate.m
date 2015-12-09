@@ -132,7 +132,7 @@ static void pjsuaOnAppConfigCb(pjsua_app_config *cfg)
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSString *userId = [ud objectForKey:@"userId"];
-    if (userId) {
+    if (!userId) {
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"mainTabBar" bundle:nil];
         tabBarController *vc = (tabBarController *)[mainStoryboard instantiateInitialViewController];
         self.window.rootViewController = vc;
@@ -150,7 +150,14 @@ static void pjsuaOnAppConfigCb(pjsua_app_config *cfg)
     {
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![ud objectForKey:@"deviceId"]) {
+        CFUUIDRef puuid = CFUUIDCreate( nil );
+        CFStringRef strRef = CFUUIDCreateString( nil, puuid );
+        NSString *uuidString = [NSString stringWithString:(__bridge NSString * _Nonnull)(strRef)];
+        [defaults setValue:uuidString forKey:@"deviceId"];
+        [defaults synchronize];
+    }
     return YES;
 }
 

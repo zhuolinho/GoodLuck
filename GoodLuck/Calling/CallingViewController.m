@@ -24,7 +24,8 @@ void ui_make_new_call();
     [self dismissViewControllerAnimated:true completion:nil];
 }
 - (IBAction)answerButtonClick:(UIButton *)sender {
-    ui_answer_call();
+    pjsua_call_set_vid_strm(current_call,
+                            PJSUA_CALL_VID_STRM_ADD, NULL);
 }
 
 - (void)viewDidLoad {

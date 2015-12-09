@@ -24,12 +24,12 @@
 @implementation LoginViewController
 
 - (IBAction)scanButtonClick:(UIButton *)sender {
-    [myAPI login];
+//    [myAPI login];
     ifScan = 1;
 }
 
 - (IBAction)wxButtonClick:(UIButton *)sender {
-    [myAPI login];
+//    [myAPI login];
     ifScan = 2;
 }
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dSr-cp-ec0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dSr-cp-ec0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--Calling View Controller-->
@@ -21,12 +22,19 @@
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.53725490200000003" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQ2-GL-szi">
-                                <rect key="frame" x="131" y="476" width="54" height="30"/>
+                                <rect key="frame" x="20" y="476" width="54" height="30"/>
                                 <state key="normal" title="Hangup">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="hangUpButtonClick:" destination="dSr-cp-ec0" eventType="touchUpInside" id="ipd-aI-9SB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5y-7R-Mzh">
+                                <rect key="frame" x="265" y="476" width="51" height="30"/>
+                                <state key="normal" title="Answer"/>
+                                <connections>
+                                    <action selector="answerButtonClick:" destination="dSr-cp-ec0" eventType="touchUpInside" id="oQs-Bb-jve"/>
                                 </connections>
                             </button>
                         </subviews>

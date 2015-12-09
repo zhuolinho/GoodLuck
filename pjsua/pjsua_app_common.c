@@ -258,6 +258,7 @@ void arrange_window(pjsua_vid_win_id wid)
 
 #ifdef USE_GUI
     displayWindow(wid);
+    pjsua_vid_win_rotate(wid, 90);
 #endif
 
 #else

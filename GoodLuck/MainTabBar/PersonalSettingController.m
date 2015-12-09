@@ -54,7 +54,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [myAPI login];
+//    [myAPI login];
 }
 
 - (void)switchVoiceChange:(id)sender {

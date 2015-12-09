@@ -55,7 +55,10 @@
 		065C29D11B64D8FF00E80339 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065C29D01B64D8FF00E80339 /* Images.xcassets */; };
 		065C29D41B64D8FF00E80339 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065C29D21B64D8FF00E80339 /* LaunchScreen.xib */; };
 		065C29E01B64D8FF00E80339 /* GoodLuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C29DF1B64D8FF00E80339 /* GoodLuckTests.m */; };
+		0694C99C1C16EAE8006DBB0A /* ValueCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0694C99B1C16EAE8006DBB0A /* ValueCodeViewController.m */; };
+		0694C99F1C171297006DBB0A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0694C99E1C171297006DBB0A /* FirstViewController.m */; };
 		0696CCB71B97E86F00BAD01D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0696CCB51B97E86F00BAD01D /* Login.storyboard */; };
+		06D9F8081C16C0B500FD8C1A /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D9F8071C16C0B500FD8C1A /* RegisterViewController.m */; };
 		06DF63A41B97F73C003D5F19 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF63A11B97F73C003D5F19 /* LoginViewController.m */; };
 		06DF63A51B97F73C003D5F19 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF63A31B97F73C003D5F19 /* ScanViewController.m */; };
 		968A974C1B986C7700AD5E2F /* mainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968A974B1B986C7700AD5E2F /* mainTabBar.storyboard */; };
@@ -132,7 +135,13 @@
 		065C29D91B64D8FF00E80339 /* GoodLuckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodLuckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		065C29DE1B64D8FF00E80339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		065C29DF1B64D8FF00E80339 /* GoodLuckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodLuckTests.m; sourceTree = "<group>"; };
+		0694C99A1C16EAE8006DBB0A /* ValueCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueCodeViewController.h; sourceTree = "<group>"; };
+		0694C99B1C16EAE8006DBB0A /* ValueCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueCodeViewController.m; sourceTree = "<group>"; };
+		0694C99D1C171297006DBB0A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		0694C99E1C171297006DBB0A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		0696CCB61B97E86F00BAD01D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		06D9F8061C16C0B500FD8C1A /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		06D9F8071C16C0B500FD8C1A /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		06DF63A01B97F73C003D5F19 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		06DF63A11B97F73C003D5F19 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		06DF63A21B97F73C003D5F19 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
@@ -347,10 +356,16 @@
 			isa = PBXGroup;
 			children = (
 				0696CCB51B97E86F00BAD01D /* Login.storyboard */,
+				0694C99D1C171297006DBB0A /* FirstViewController.h */,
+				0694C99E1C171297006DBB0A /* FirstViewController.m */,
 				06DF63A01B97F73C003D5F19 /* LoginViewController.h */,
 				06DF63A11B97F73C003D5F19 /* LoginViewController.m */,
 				06DF63A21B97F73C003D5F19 /* ScanViewController.h */,
 				06DF63A31B97F73C003D5F19 /* ScanViewController.m */,
+				06D9F8061C16C0B500FD8C1A /* RegisterViewController.h */,
+				06D9F8071C16C0B500FD8C1A /* RegisterViewController.m */,
+				0694C99A1C16EAE8006DBB0A /* ValueCodeViewController.h */,
+				0694C99B1C16EAE8006DBB0A /* ValueCodeViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -472,7 +487,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0622A5E51B88651900198A68 /* API.m in Sources */,
+				06D9F8081C16C0B500FD8C1A /* RegisterViewController.m in Sources */,
 				0655CB021B8639AE000AFE17 /* CallingViewController.m in Sources */,
+				0694C99C1C16EAE8006DBB0A /* ValueCodeViewController.m in Sources */,
+				0694C99F1C171297006DBB0A /* FirstViewController.m in Sources */,
 				06DF63A41B97F73C003D5F19 /* LoginViewController.m in Sources */,
 				0655CAFA1B86397E000AFE17 /* pjsua_app_legacy.c in Sources */,
 				0655CB091B8639C2000AFE17 /* MainTabBarController.m in Sources */,
@@ -633,6 +651,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"PJ_AUTOCONF=1",
 					"DEBUG=1",
@@ -656,6 +675,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 			};
 			name = Debug;
@@ -665,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "PJ_AUTOCONF=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -684,6 +705,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 			};
 			name = Release;

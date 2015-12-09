@@ -13,12 +13,13 @@ static NSMutableDictionary *picDic;
 @implementation API
 
 - (void)post:(NSString *)action dic:(NSDictionary *)dic {
-    NSString *str = [NSString stringWithFormat:@"%@/Yarlung/User/%@", HOST, action];
+    NSString *str = [NSString stringWithFormat:@"%@/Yarlung/%@", HOST, action];
     NSURL *url = [NSURL URLWithString:str];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
-    [request setValue:@"1000912389" forHTTPHeaderField:@"uuid"];
-//    NSDictionary *json = @{@"userName" : @"123", @"pasword" : @"789"};
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [request setValue:[ud objectForKey:@"deviceId"] forHTTPHeaderField:@"uuid"];
+    [request setValue:[ud objectForKey:@"token"] forHTTPHeaderField:@"token"];
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
     request.HTTPBody = data;
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -28,17 +29,9 @@ static NSMutableDictionary *picDic;
             if(jsonObject != nil && err == nil){
                 if([jsonObject isKindOfClass:[NSDictionary class]]){
                     NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
-//                    long errNo = [deserializedDictionary[@"errno"] integerValue];
-//                    if (errNo == 0) {
-                        if (self->_delegate) {
-                            [self->_delegate didReceiveAPIResponseOf:self data:deserializedDictionary];
-                        }
-//                    }
-//                    else {
-//                        if (self->_delegate) {
-//                            [self->_delegate didReceiveAPIErrorOf:self data:errNo];
-//                        }
-//                    }
+                    if (self->_delegate) {
+                        [self->_delegate didReceiveAPIResponseOf:self data:deserializedDictionary];
+                    }
                 }else if([jsonObject isKindOfClass:[NSArray class]]){
                     if (self->_delegate) {
                         [self->_delegate didReceiveAPIErrorOf:self data:-999];
@@ -63,8 +56,16 @@ static NSMutableDictionary *picDic;
     [self post:@"Regscan.action" dic:@{@"userName": username, @"password": password}];
 }
 
-- (void)login {
-    [self post:@"Login.action" dic:@{}];
+- (void)login:(NSString *)username password:(NSString *)password {
+    [self post:@"Login.action" dic:@{@"userName": username, @"password": password, @"devType": @"2"}];
+}
+
+- (void)registerAccount:(NSString *)username {
+    [self post:@"User/Register.action" dic:@{@"userName": username}];
+}
+
+- (void)checkCode:(NSString *)mobileNo password:(NSString *)password code:(NSString *)code {
+    [self post:@"User/Verificationcode/Check.action" dic:@{@"mobileNo": mobileNo, @"password": password, @"code": code, @"checkType": @"0", @"devType": @"2"}];
 }
 
 + (UIImage *)getPicByKey:(NSString *)key {
